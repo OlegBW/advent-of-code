@@ -10,6 +10,8 @@
   "devDependencies": {
     "@stylistic/eslint-plugin": "^2.3.0",
     "@tsconfig/recommended": "^1.0.7",
+    "@types/ejs": "^3.1.5",
+    "@types/node": "^22.2.0",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.14.1",
     "eslint": "^8.57.0",
@@ -41,5 +43,12 @@
     "template",
     "configuration"
   ],
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@fastify/mongodb": "^8.0.0",
+    "@fastify/view": "^9.1.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "fastify": "^4.28.1"
+  }
 }

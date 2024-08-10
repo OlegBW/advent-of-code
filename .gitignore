@@ -6,3 +6,6 @@ node_modules
 
 # Sensitive data
 .env
+
+# Distribution
+dist
