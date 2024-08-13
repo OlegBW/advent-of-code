@@ -5,7 +5,7 @@ import Fastify from 'fastify';
 import ejs from 'ejs';
 import dotenv from 'dotenv';
 import fastifyView from '@fastify/view';
-import Mongo from '@fastify/mongodb';
+// import Mongo from '@fastify/mongodb';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,12 +16,12 @@ const fastify = Fastify({
   logger: true,
 });
 
-await fastify.register(Mongo, {
-  forceClose: true,
-  url: process.env.MONGO_URL || 'mongodb://mongo/mydb',
-});
+// await fastify.register(Mongo, {
+//   forceClose: true,
+//   url: process.env.MONGO_URL || 'mongodb://mongo/mydb',
+// });
 
-await fastify.register(fastifyView, { engine: { ejs }, templates: 'views' });
+await fastify.register(fastifyView, { engine: { ejs }, templates: 'src/views' });
 
 fastify.get('/', async (req, rep) => {
   await rep.send({ data: 'Hello, World!' });
